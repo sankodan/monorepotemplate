@@ -9,6 +9,12 @@
   "workspaces": {
     "packages": [
       "packages/*"
+    ],
+    "nohoist": [
+      "**/react",
+      "**/react-dom",
+      "**/react-native",
+      "**/react-native/**"
     ]
   },
   "scripts": {
@@ -19,7 +25,8 @@
     "android:studio": "yarn workspace mobileapp studio",
     "android": "yarn workspace mobileapp android",
     "metro": "yarn workspace start",
-    "web": "yarn workspace webapp start"
+    "web": "yarn workspace webapp start",
+    "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
