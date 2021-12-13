@@ -1,0 +1,11 @@
+{
+  "name": "monorepotemplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sankodan/monorepotemplate.git",
+  "author": "sankodan <54448599+sankodan@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
