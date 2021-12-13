@@ -1,0 +1,34 @@
+{
+  "name": "monorepotemplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "repository": "https://github.com/sankodan/monorepotemplate.git",
+  "author": "sankodan <54448599+sankodan@users.noreply.github.com>",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react",
+      "**/react-dom",
+      "**/react-native",
+      "**/react-native/**"
+    ]
+  },
+  "scripts": {
+    "packages:publish": "lerna publish --yes",
+    "ios": "yarn workspace mobileapp ios",
+    "ios:pods": "yarn workspace mobileapp pod-install",
+    "ios:xcode": "yarn workspace mobileapp xcode",
+    "android:studio": "yarn workspace mobileapp studio",
+    "android": "yarn workspace mobileapp android",
+    "metro": "yarn workspace start",
+    "web": "yarn workspace webapp start",
+    "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
