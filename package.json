@@ -5,6 +5,15 @@
   "repository": "https://github.com/sankodan/monorepotemplate.git",
   "author": "sankodan <54448599+sankodan@users.noreply.github.com>",
   "license": "MIT",
+  "scripts": {
+    "packages:publish": "lerna publish --yes",
+    "ios": "yarn workspace mobileapp ios",
+    "ios:pods": "yarn workspace mobileapp pod-install",
+    "ios:xcode": "yarn workspace mobileapp xcode",
+    "android:studio": "yarn workspace mobileapp studio",
+    "android": "yarn workspace mobileapp android",
+    "metro": "yarn workspace @cargill/cgl-dxo-marketlink-fe-emea-mobileapp start"
+  },
   "devDependencies": {
     "lerna": "^3.22.1"
   }
