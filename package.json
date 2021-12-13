@@ -2,9 +2,15 @@
   "name": "monorepotemplate",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "repository": "https://github.com/sankodan/monorepotemplate.git",
   "author": "sankodan <54448599+sankodan@users.noreply.github.com>",
   "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "scripts": {
     "packages:publish": "lerna publish --yes",
     "ios": "yarn workspace mobileapp ios",
@@ -12,7 +18,8 @@
     "ios:xcode": "yarn workspace mobileapp xcode",
     "android:studio": "yarn workspace mobileapp studio",
     "android": "yarn workspace mobileapp android",
-    "metro": "yarn workspace @cargill/cgl-dxo-marketlink-fe-emea-mobileapp start"
+    "metro": "yarn workspace start",
+    "web": "yarn workspace webapp start"
   },
   "devDependencies": {
     "lerna": "^3.22.1"
